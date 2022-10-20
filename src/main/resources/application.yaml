@@ -1,0 +1,21 @@
+spring: 
+  cloud: 
+    stream:
+      function:
+        definition: processHello
+      bindings: 
+        processHello-in-0: 
+          destination: hello-strings
+          group: hello-strings-group
+          consumer: 
+            maxAttempts: 4
+            backOffInitialInterval: 15000
+            backOffMaxInterval: 60000 
+        processHello-0: 
+          destination: hello-strings-processed
+          
+  rabbitmq:
+    host: localhost
+    port: 5220
+    username: default_user_Ro3LEqFib4fPfQx_uAL
+    password: I1tTPuf6ndQdGZOy6wFIbr0r_HUnII0_
