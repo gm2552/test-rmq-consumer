@@ -13,9 +13,3 @@ spring:
             backOffMaxInterval: 60000 
         processHello-0: 
           destination: hello-strings-processed
-          
-  rabbitmq:
-    host: localhost
-    port: 5220
-    username: default_user_Ro3LEqFib4fPfQx_uAL
-    password: I1tTPuf6ndQdGZOy6wFIbr0r_HUnII0_
